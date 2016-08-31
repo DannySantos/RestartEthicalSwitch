@@ -1,6 +1,5 @@
 Feature: User
 
-  @wip
   Scenario: A User registers
     Given they are on the registration page
     When they fill in the registration form with valid details

@@ -1,0 +1,61 @@
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+$pixel-sizes: 1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 50;
+
+@each $size in $pixel-sizes {
+  .mt-#{$size} {
+    margin-top: #{$size}px;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .mr-#{$size} {
+    margin-right: #{$size}px;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .mb-#{$size} {
+    margin-bottom: #{$size}px;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .ml-#{$size} {
+    margin-left: #{$size}px;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .pt-#{$size} {
+    padding-top: #{$size}px;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .pr-#{$size} {
+    padding-right: #{$size}px;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .pb-#{$size} {
+    padding-bottom: #{$size}px;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .pl-#{$size} {
+    padding-left: #{$size}px;
+  }
+}

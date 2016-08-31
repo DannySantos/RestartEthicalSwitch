@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+.topbar {
+  height: 30px;
+  line-height: 30px;
+  background-color: #333;
+  color: #fff;
+}
+
+.topbar a {
+  color: #fff;
+}

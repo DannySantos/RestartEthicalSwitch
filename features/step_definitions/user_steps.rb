@@ -4,9 +4,12 @@ Given(/^they are on the registration page$/) do
 end
 
 When(/^they fill in the registration form with valid details$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  fill_in "Email", with: "test@test.com"
+  fill_in "Password", with: "password"
+  fill_in "Password confirmation", with: "password"
+  click_button "Sign up"
 end
 
 Then(/^a User should be created$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(User.first.email).to eq('test@test.com')
 end

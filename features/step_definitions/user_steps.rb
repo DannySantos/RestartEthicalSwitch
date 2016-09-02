@@ -1,6 +1,25 @@
 Given(/^they are on the registration page$/) do
-  visit root_path
-  click_on "Register"
+  visit new_user_registration_path
+end
+
+Given(/^a User has previously registered$/) do
+  @user = User.create!(
+    {
+      email: "test@test.com",
+      password: "password",
+      password_confirmation: "password"
+    }
+  )
+end
+
+Given(/^they are on the log in page$/) do
+  visit new_user_session_path
+end
+
+When(/^they fill out the log in form with valid details$/) do
+  fill_in "Email", with: "test@test.com"
+  fill_in "Password", with: "password"
+  click_button "Log in"
 end
 
 When(/^they fill in the registration form with valid details$/) do
@@ -12,4 +31,8 @@ end
 
 Then(/^a User should be created$/) do
   expect(User.first.email).to eq('test@test.com')
+end
+
+Then(/^they are logged in$/) do
+  expect(page).to have_content("Signed in successfully.")
 end

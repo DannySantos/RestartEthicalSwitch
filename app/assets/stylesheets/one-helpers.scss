@@ -10,7 +10,7 @@
   text-align: center;
 }
 
-$pixel-sizes: 1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 50;
+$pixel-sizes: 0 1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 50;
 
 @each $size in $pixel-sizes {
   .mt-#{$size} {

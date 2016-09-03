@@ -4,13 +4,14 @@ $( document ).ready(function() {
     source: function(request, response){
       $.ajax({
         type: 'GET',
-        url: '/postcode.ashx',
+        url: '/postcode',
         dataType: 'json',
         data: {
           excludePostBoxFlag: true,
           q: request.term 
         },
         success: function(data) {
+          debugger;
           if (data.localities.locality instanceof Array) {
             response($.map(data.localities.locality, function (item) {
               return {

@@ -1,2 +1,2 @@
-class ProviderProduct < ActiveRecord::Base
+class ProviderProduct < ApplicationRecord
 end

@@ -1,2 +1,2 @@
-class ProviderState < ActiveRecord::Base
+class ProviderState < ApplicationRecord
 end
